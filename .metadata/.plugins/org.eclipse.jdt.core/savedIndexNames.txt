@@ -1,0 +1,20 @@
+INDEX VERSION 1.131+C:\Users\91987\OneDrive\Desktop\ASE_LAB_4\.metadata\.plugins\org.eclipse.jdt.core
+52890108.index
+3288342895.index
+2160178482.index
+2759003279.index
+1109292285.index
+1977738791.index
+3775723083.index
+1865797976.index
+619955766.index
+959654312.index
+2194127597.index
+1067094681.index
+1995197457.index
+3681787409.index
+2833702921.index
+78893991.index
+2850732183.index
+1800562476.index
+3189949272.index

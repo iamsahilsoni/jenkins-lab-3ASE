@@ -1,0 +1,17 @@
+package ASELAB4;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Lab3TestCases {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+@
+}
+
+
+

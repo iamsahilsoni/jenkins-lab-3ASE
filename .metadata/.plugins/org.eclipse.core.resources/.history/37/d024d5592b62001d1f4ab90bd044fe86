@@ -1,0 +1,342 @@
+package ASELAB4;
+
+import static org.junit.Assert.assertEquals;
+
+
+import org.junit.Test;
+
+
+public class Trigonometry {
+	double decimals = 0.001;
+	
+	//Unit testing: Test case for Factorial
+
+
+	/**
+	 * test case for +ve value
+	 * Expected Result: 5040
+	 * Actual Result: 5040
+	 * @throws Exception
+	 */
+	@Test
+	public void factorial1() throws Exception
+	{
+		assertEquals(5040, LibraryforTrigonometry.fact(7));
+	}
+
+	
+	/**
+	 * test case  for -ve value
+	 * Expected Result: 5040
+	 * Actual Result: 5040
+	 * @throws Exception
+	 */
+	@Test
+	public void factorial2() throws Exception
+	{
+		assertEquals(1, LibraryforTrigonometry.fact(-1));
+	}
+	
+	
+	/**
+	 * test case for 0 value
+	 * Expected Result: 1
+	 * Actual Result: 1
+	 * Result: Success
+	 * @throws Exception
+	 */
+	@Test
+	public void factorial3() throws Exception
+	{
+		assertEquals(1, LibraryforTrigonometry.fact(0));
+	}
+
+	
+	//Unit testing: Test case for checking power
+	
+	
+	/**
+	 * test case comparing with math library positive value
+	 * Expected Result: 36
+	 * Actual Result: 36
+	 * Result: Success
+	 * @throws Exception
+	 */
+	@Test
+	public void power() throws Exception
+	{
+		assertEquals(Math.pow(6,2),LibraryforTrigonometry.power(6,2),0);
+	}
+
+	
+	/**
+	 * test case comparing with math library negative value
+	 * Expected Result: 36
+	 * Actual Result: 36
+	 * Result: Success
+	 * @throws Exception
+	 */
+	@Test
+	public void power1() throws Exception
+	{
+		assertEquals(Math.pow(-2.1,3),LibraryforTrigonometry.power(-2.1,3),0);
+	}
+	
+	
+	/**
+	 * test case comparing with math library float value
+	 * Expected Result: 36
+	 * Actual Result: 36
+	 * Result: Success
+	 * @throws Exception
+	 */
+	@Test
+	public void power2() throws Exception
+	{
+		assertEquals(Math.pow(2.1,3),LibraryforTrigonometry.power(2.1,3),0);
+	}
+
+	
+	/**
+	 * test case comparing with math library from degree to radians
+	 * inserted value: 50
+	 * Expected Result: 0.87266
+	 * Actual Result: 0.87266
+	 * Result: Success
+	 * @throws Exception
+	 */		
+	@Test
+	public void degreeToRadianTest() throws Exception
+	{
+		assertEquals(Math.toRadians(50),LibraryforTrigonometry.degreeToRadian(50),decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library from degree to radians
+	 * inserted value: 3.056
+	 * Expected Result: 175.095
+	 * Actual Result: 175.09593
+	 * Result: Success
+	 * @throws Exception
+	 */		
+
+	@Test
+	public void radianToDegreeTest() throws Exception
+	{
+		assertEquals(Math.toDegrees(3.056),LibraryforTrigonometry.radianToDegree(3.056),decimals);
+	}
+		
+	
+	/**
+	 * Success: test case for sin function for degree value
+	 * inserted value: 15
+	 * Expected Result: 0.2588
+	 * Actual Result: 0.2588
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void sinTest1() throws Exception
+	{
+		assertEquals(0.5735, LibraryforTrigonometry.sin(LibraryforTrigonometry.degreeToRadian(35)), decimals);
+		
+	}
+	
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * Expected Result: 0.2588
+	 * Actual Result: 0.2588
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void sinTest2() throws Exception
+	{
+		assertEquals(Math.sin(3.0892), LibraryforTrigonometry.sin(3.0892), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 4.7123
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void sinTest3() throws Exception
+	{
+		
+		assertEquals(LibraryforTrigonometry.sin(Math.toDegrees(4.7123)), LibraryforTrigonometry.sin(LibraryforTrigonometry.radianToDegree(4.7123)), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 320
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void sinTest4() throws Exception
+	{
+		assertEquals(LibraryforTrigonometry.sin(Math.toRadians(320)), LibraryforTrigonometry.sin(LibraryforTrigonometry.degreeToRadian(320)), decimals);
+		
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: -15
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void sinTest5() throws Exception
+	{
+		assertEquals(Math.sin(-15), LibraryforTrigonometry.sin(-15), decimals);
+	}
+	
+	
+//Test cases for four quadrants for cos
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void cosTest1() throws Exception
+	{
+		assertEquals(0.7071, LibraryforTrigonometry.cos(LibraryforTrigonometry.degreeToRadian(45)), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void cosTest2() throws Exception
+	{
+		assertEquals(Math.cos(2.094), LibraryforTrigonometry.cos(2.094), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void cosTest3() throws Exception
+	{
+		assertEquals(LibraryforTrigonometry.cos(Math.toDegrees(3.4732)), LibraryforTrigonometry.cos(LibraryforTrigonometry.radianToDegree(3.4732)), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void cosTest4() throws Exception
+	{
+		assertEquals(LibraryforTrigonometry.cos(Math.toRadians(330)), LibraryforTrigonometry.cos(LibraryforTrigonometry.degreeToRadian(330)), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void cosTest5() throws Exception
+	{
+		assertEquals(Math.cos(-15), LibraryforTrigonometry.cos(-15), decimals);
+	}
+
+//Test cases for four quadrants for tan
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void tanTest1() throws Exception
+	{ 
+		assertEquals(1, LibraryforTrigonometry.tan(LibraryforTrigonometry.degreeToRadian(45)), decimals);
+		
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * Result: Success
+	 * @throws Exception
+	 */	
+	@Test
+	public void tanTest2() throws Exception
+	{
+		assertEquals(Math.tan(2.6179), LibraryforTrigonometry.tan(2.6179), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * @throws Exception
+	 */	
+	@Test
+	public void tanTest3() throws Exception
+	{
+		assertEquals(LibraryforTrigonometry.tan(Math.toDegrees(1.1666)), LibraryforTrigonometry.tan(LibraryforTrigonometry.radianToDegree(1.1666)), decimals);
+	}
+
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * @throws Exception
+	 */	
+	@Test
+	public void tanTest4() throws Exception
+	{
+		assertEquals(LibraryforTrigonometry.tan(Math.toRadians(340)), LibraryforTrigonometry.tan(LibraryforTrigonometry.degreeToRadian(340)), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * @throws Exception
+	 */	
+	@Test
+	public void tanTest5() throws Exception
+	{
+		assertEquals(Math.tan(-15), LibraryforTrigonometry.tan(-15), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * @throws Exception
+	 */	
+	@Test
+	public void tanTest6() throws Exception
+	{
+		assertEquals(Math.tan(4.712), LibraryforTrigonometry.tan(4.712), decimals);
+	}
+	
+	/**
+	 * Success: test case comparing with math library
+	 * inserted value: 3.0892
+	 * @throws Exception
+	 */	
+	@Test
+	public void tanTest7() throws Exception
+	{
+		assertEquals(Math.tan(1.5707963268), LibraryforTrigonometry.tan(1.5707963268), decimals);
+	}
+}

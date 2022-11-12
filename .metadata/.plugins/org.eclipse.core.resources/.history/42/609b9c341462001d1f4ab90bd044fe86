@@ -1,0 +1,23 @@
+package ASELAB4;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Lab3TestCases {
+
+	double decimals = 0.1;
+	
+	//Test cases for four quadrants for sin
+		
+		@Test
+		public void sinTest1() throws Exception
+		{
+			assertEquals(0.2588, LibraryforTrigonometry.sin(LibraryforTrigonometry.degreeToRadian(15)), decimals);
+			
+		}
+}
+
+
+
